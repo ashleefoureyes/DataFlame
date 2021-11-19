@@ -11,13 +11,12 @@ DATAFLAME_LOGO = "/assets/dataFlameLogo3.png"
 def nav_bar():
     nav = dbc.Navbar(
         dbc.Container(
-
             [
                 html.A(
                     dbc.Row(
                         [
                             dbc.Col(html.Img(src=DATAFLAME_LOGO, height="50px")),
-                            dbc.Col(dbc.NavbarBrand("dataflame", className="ms-2")),
+                            dbc.Col(dbc.NavbarBrand("dataFlame", className="ms-2")),
                         ],
                         align="center",
                         className="g-0",
