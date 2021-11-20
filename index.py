@@ -16,6 +16,7 @@ from layouts import (
     player_menu,
     shot_stats_collapse,
     arena_layout,
+    player_page_header,
     player_page
 )
 
@@ -44,7 +45,7 @@ header = dbc.Row(
 )
 
 content = html.Div([dcc.Location(id="url"), html.Div(id="page-content")])
-container = dbc.Container([header, content])
+container = dbc.Container([content], className="dataflame-content")
 
 # Home callback, set and return
 # Connect pages to container
@@ -62,9 +63,9 @@ def display_page(pathname):
             className="home",
         )
     elif pathname.endswith("/game"):
-        return team_menu, player_menu
+        return team_menu
     elif pathname.endswith("/player"):
-        return team_menu, player_menu, shot_stats_collapse, player_page
+        return player_page_header, player_page
     elif pathname.endswith("/predictive"):
         return app_menu, predictive_menu
     else:

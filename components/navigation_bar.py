@@ -16,31 +16,30 @@ def nav_bar():
                     dbc.Row(
                         [
                             dbc.Col(html.Img(src=DATAFLAME_LOGO, height="50px")),
-                            dbc.Col(dbc.NavbarBrand("dataFlame", className="ms-2")),
+                            dbc.Col(dbc.NavbarBrand("dataflame", className="ms-2")),
                         ],
                         align="center",
                         className="g-0",
                     ),
                     href=f"{app_name}",
-                    style={"textDecoration": "none"},
+                    style={"textDecoration": "none", "color":"white"},
                 ),
-                dbc.NavbarToggler(id="navbar-toggler2", n_clicks=0),
+                dbc.NavbarToggler(id="navbar-toggler", n_clicks=0),
                 dbc.Collapse(
                     dbc.Nav(
-                        [dbc.NavItem(dbc.NavLink("Game Analysis", href=f"{app_name}/game")),
-                         dbc.NavItem(dbc.NavLink("Player Analysis", href=f"{app_name}/player")),
+                        [dbc.NavItem(dbc.NavLink("Game", href=f"{app_name}/game")),
+                         dbc.NavItem(dbc.NavLink("Player", href=f"{app_name}/player")),
                          dbc.NavItem(dbc.NavLink("Predictive", href=f"{app_name}/predictive"))],
-                        className="ms-auto",
+                        class_name="ms-auto",
                         navbar=True,
                     ),
-                    id="navbar-collapse2",
+                    id="navbar-collapse",
                     navbar=True,
                 ),
             ],
 
         ),
-        class_name="mb-5",
-        color="#C8102E",
+        class_name="top-nav",
 
     )
 

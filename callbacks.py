@@ -11,7 +11,6 @@ from dash import Input, Output, State, html
 
 from components.figures.arena_plot import *
 
-
 players_df = dta.players
 total_df = dta.df
 
@@ -33,18 +32,32 @@ def update_player_dropdown(team):
 # Load Player Profile
 # Callback to Player profile datatable
 @app.callback(
-    [Output("player_profile", "data"), Output("player_profile", "columns"), Output("player-shooting-figure", "figure")],
+    [Output("player_profile", "data"), Output("player_profile", "columns"),
+     Output("player-shooting-figure", "figure")],
     [Input("player-dropdown", "value")],
 )
-def update_shots_table(player):
+def update_player_page(player):
     player_dets = dta.shot_details(player)
     shooting_df = dta.shot_details_for_plot(player)
-    shots_df_new = dta.load_shooting_df(shooting_df)
-    figure = plot_graph_new(shots_df_new)
+    shots_df = dta.load_shooting_df(shooting_df)
+    figure = plot_shooting_graph(shots_df)
+
     # Return player profile to datatable
     return player_dets.to_dict("records"), [{"name": x, "id": x} for x in player_dets], figure
 
-#toggle visibilty of all shot
+
+# Show player page when player is selected
+@app.callback(
+    Output("player-page", "style"),
+    [Input("player-dropdown", "value")]
+)
+def update_player_visibility(player):
+    if (player):
+        return {"display": "block"}
+    return {"display": "none"}
+
+
+# Toggle visibilty of data table
 @app.callback(
     Output("collapse-shots-card", "is_open"),
     [Input("collapse-shots-btn", "n_clicks")],

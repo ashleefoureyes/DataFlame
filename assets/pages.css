@@ -1,5 +1,8 @@
+
+ /* ----- BASE APP STYLING ----- */
+
 *{
-  font-family: "Poppins";
+    font-family: "Poppins";
 }
 
 @font-face {
@@ -7,8 +10,73 @@
     src: url("fonts/Poppins-Regular.ttf") format("truetype");
 }
 
-.card-styled{
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+/* ----- NAVIGATION STYLING  ----- */
+
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 800;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
+.navbar-light .navbar-brand {
+    color: #ffffff;
+    font-size:1.5em;
+    font-weight:600;
+}
 
+.top-nav{
+    background: rgb(221,27,58);
+    background: linear-gradient(0deg, rgba(221,27,58,1) 7%, rgba(74,30,30,1) 100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-bottom: 2em;
+}
+
+ /* ----- ROW AND COLUMN STYLING ----- */
+
+.centered-col{
+    margin-top: auto;
+}
+
+.dropdown-row{
+    margin-bottom: 1em;
+}
+
+/*  ----- PAGE COMPONENT STYLING ----- */
+
+.card-styled{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-height: 15em;
+}
+
+.section-header{
+    border-radius: .5em;
+    background: #C8102E;
+    padding: 1.5em;
+    position: relative;
+    color: #ffffff;
+    margin-bottom: .15em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.player-page-header{
+    font-size: 1.75em;
+    font-weight: 800;
+    margin-bottom: 1em;
+}
+
+.player-page-menu{
+    background: #d6d6d6;
+    padding: .5em;
+    border-radius:.25em;
+    margin-bottom:1em;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.dataflame-content{
+    background-color: #f0f0f0;
+    padding: 1em;
+    border-radius: .5em;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}

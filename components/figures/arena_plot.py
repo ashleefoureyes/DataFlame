@@ -3,7 +3,7 @@ import plotly.graph_objs as go
 from itertools import chain
 
 
-def plot_graph_new(shooting_df_new):
+def plot_shooting_graph(shooting_df_new):
     arena_figure = go.Figure(
         data=[
             go.Scatter(
