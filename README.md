@@ -1,5 +1,7 @@
 # DataFlame 
 
+A hockey data tool written in Python 3.9, utilizing the Dash framework. 
+
 ## Status (As of Friday, November 19th)
 The current revision is meant to be a UI overview. Most work done to date has been focused on data loading/handling and base UI development, so no deep analysis functionality
 has been developed. 
@@ -17,3 +19,4 @@ in a datatable as a placeholder, however this section will be replaced with some
 
 #### Player Overview placeholder
 ![Player Layout Example](https://github.com/ashleefoureyes/DataFlame/blob/master/assets/player_layout_example.png)
+
