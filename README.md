@@ -17,6 +17,6 @@ in a datatable as a placeholder, however this section will be replaced with some
 #### Plotting Shots on Arena Figure
 ![Player Selection](https://github.com/ashleefoureyes/DataFlame/blob/master/assets/gifs/shot-plot.gif)
 
-#### Player Overview placeholder
+#### Player Page (with player overview placeholders)
 ![Player Layout Example](https://github.com/ashleefoureyes/DataFlame/blob/master/assets/player_layout_example.png)
 
