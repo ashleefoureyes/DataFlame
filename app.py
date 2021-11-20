@@ -9,7 +9,7 @@ app = dash.Dash(
 )
 
 
-app.title = "Women's Hockey Insight"
+app.title = "dataflame - Hockey Data Tool"
 # set app server
 svr = app.server
 app.config.suppress_callback_exceptions = True
